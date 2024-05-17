@@ -9,29 +9,67 @@
 
 
 <body>
-  <form action="controlador" method="get">
+  <li><a href="archivo1.html">Principal</a></li>
+  <li><a href="archivo2.html">Salida</a></li>
+  <li><a href="archivo3.html">Configuracion</a></li>
+  <li><a href="formulario.html">Contacto</a></li>
+  <li><a href="tabla.html">tabla</a></li>
+  <form action="controlador" method="get" enctype="multipart/form-data">
     <div>
       <label for="edad">ingrese su edad</label>
       <input type="number" step="1" min="0" max="20" value="5" name="edad" disabled id="edad">
     </div>
     <div>
       <label for="nombre">nombre</label>
-      <input type="text" name="nombre" pattern="[a-zA-Z]{0,20}" placeholder="ingrese su nombre" id="nombre" autofocus
-        autocomplete="off">
+      <input type="text" value="nombre" name="nombre" pattern="[a-z,A-Z]{0,20}" placeholder="ingrese su nombre"
+        id="nombre" autofocus autocomplete="off">
     </div>
     <div>
       <label for="color">seleccione un color</label>
-      <input type="color" id="color">
+      <input type="color" value="color" name="color" id="color" checked>
     </div>
-    <button type="submit">guardar</button>
     <div>
       <label for="correo">ingrese su correo</label>
-      <input type="text" id="correo" required>
+      <input type="text" value="correo" name="correo" id="correo" required>
     </div>
     <div>
       <label for="telefono">ingrese su telefono</label>
-      <input type="text" id="telefono" required pattern="[0-9]{0,10}" required>
+      <input type="text" value="telefono" name="telefono" id="telefono" required pattern="[0-9]{0,10}" required>
     </div>
+    <div>
+      <label for="ciudad">Seleccione su ciudad</label>
+      <select name="ciudad" id="ciudad">
+        <option value="1">Giron</option>
+        <option value="2">Bucaramanga</option>
+        <option value="3" selected>Florida</option>
+      </select>
+    </div>
+    <div>
+      <label>
+        <input type="radio" name="sexo" checked>Hombre
+      </label>
+      <label>
+        <input type="radio" name="sexo">Mujer
+      </label>
+      <div>
+        <label>
+          <input type="checkbox" name="habilidad" checked>HTML
+        </label>
+        <label>
+          <input type="checkbox" name="habilidad" checked>GIT
+        </label>
+        <label>
+          <input type="checkbox" name="habilidad" checked>CLI
+        </label>
+        <label>
+          <input type="checkbox" name="habilidad">JS
+        </label>
+      </div>
+      <div>
+        <input type="file" accept="image/*" accept="" multiple>
+      </div>
+    </div>
+    <button type="submit">guardar</button>
   </form>
 </body>
 
